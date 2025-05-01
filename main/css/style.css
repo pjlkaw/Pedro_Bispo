@@ -1,0 +1,328 @@
+/* ---------------------- IMPORTS & FONTS ---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;1,6..12,300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: 
+    'Montserrat', sans-serif;
+    'Nunito Sans', sans-serif;
+    'Work Sans', sans-serif;
+*/
+
+/* ---------------------- CORES ---------------------- */
+:root {
+    --roxo: #200d23;
+    --cinza2: #2c2e2f;
+    --preto: rgb(5, 5, 5);
+    --branco: #ecf0f1;
+    --cinza1: #717d7e;
+}
+
+/* ---------------------- RESET E FONT ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+/* ---------------------- PADRÕES GERAIS ---------------------- */
+.sub_titulo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: var(--cinza2) solid 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.icon_paragrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+/* ---------------------- IMAGENS ---------------------- */
+.header_img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: var(--cinza2) 0px 0px 15px;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to top, var(--preto), var(--cinza2));
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.header_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 25rem;
+}
+
+.header_name h1 {
+    font-size: 40px;
+    background: linear-gradient(to right, var(--branco), var(--cinza1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: #2c2e2f solid 2px;
+    padding: 2px;
+}
+
+.header_name h2 {
+    font-size: 15px;
+    background: linear-gradient(to left, var(--branco), var(--cinza1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------- HEADER MENU ---------------------- */
+.header_menu {
+    display: flex;
+    font-family: 'Nunito Sans', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--preto);
+    width: 25rem;
+}
+
+.container_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 10px;
+}
+
+.item_menu {
+    background: linear-gradient(to right, var(--cinza2), var(--preto));
+    color: var(--branco);
+    box-shadow: var(--cinza2) 0px 0px 5px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 15rem;
+    text-align: center;
+}
+
+.item_menu:hover {
+    transition: all 0.5s ease;
+    background: linear-gradient(to left, var(--cinza2), var(--preto));
+}
+
+/* ---------------------- MAIN ---------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--preto);
+}
+
+.sobre_mim {
+    background: linear-gradient(to bottom, var(--preto), var(--roxo));
+}
+
+/* ----- FRASE INICIAL ----- */
+.frase_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--cinza1), var(--cinza2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 15px;
+}
+
+/* ----- RESUMO ----- */
+.resumo_mim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    gap: 10px;
+    margin: 10px;
+}
+
+/* ----- SOBRE MIM ----- */
+.sobre_mim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.sobre_mim .p_container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 10px;
+}
+
+/* ---------------------- PROJETOS ---------------------- */
+
+.projetos {
+    background-color: var(--roxo);
+}
+
+/*projeto destaque*/
+.projeto_destaque {
+    display: grid;
+    grid-template-areas: 
+    "img desc";
+    grid-template-columns: 4fr 3fr;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--roxo), var(--preto));
+}
+
+/*projeto destaque imagens*/
+
+.projeto_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.img_main {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    width: 55rem;
+    height: 30rem;
+    box-shadow: var(--cinza1) 0px 0px 5px;
+}
+
+.linha_img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 90%;
+}
+
+.linha_img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.mini {
+    width: 100%;
+    height: 10rem;
+}
+
+/*projeto destaque descrição*/
+.projeto_desc {
+    grid-area: desc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.projeto_desc h3 {
+    font-size: 20px;
+    background: var(--cinza2);
+    padding: 1rem;
+    border-radius: 20px;
+    color: var(--branco);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    margin: 1rem;
+}
+
+.projeto_desc ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem;
+}
+
+.projeto_desc li {
+    font-size: 15px;
+}
+
+.projeto_desc .links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem;
+}
+
+.projeto_desc .links i {
+    font-size: 15px;
+}
+
+.projeto_desc .links a {
+    background: var(--cinza2);
+    padding: 1rem;
+    border-radius: 20px;
+    color: var(--branco);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+}
+
+.projeto_desc .links a:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+    box-shadow: var(--cinza1) 0px 0px 5px;
+}
