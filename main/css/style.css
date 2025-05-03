@@ -14,6 +14,7 @@
     --preto: rgb(5, 5, 5);
     --branco: #ecf0f1;
     --cinza1: #717d7e;
+    --vinho: #3a001c;
 }
 
 /* ---------------------- RESET E FONT ---------------------- */
@@ -31,19 +32,53 @@ body {
 
 /* ---------------------- PADRÕES GERAIS ---------------------- */
 .sub_titulo {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
-    padding: 10px;
-    border-bottom: var(--cinza2) solid 2px;
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 5px;
+    margin: 10px;
+    gap: 5px;
+}
+
+.sub_titulo h2 {
+    border-bottom: var(--cinza2) solid 2px;
+    padding-bottom: 10px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 p {
     font-size: 15px;
     padding: 10px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem;
+}
+
+.links i {
+    font-size: 15px;
+}
+
+.links a {
+    background: var(--cinza2);
+    padding: 1rem;
+    border-radius: 20px;
+    color: var(--branco);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+}
+
+.links a:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+    box-shadow: var(--cinza1) 0px 0px 5px;
 }
 
 .icon_paragrafo {
@@ -72,6 +107,15 @@ p {
     margin: 10px;
     box-shadow: var(--cinza2) 0px 0px 15px;
 }
+
+#pokesearch_img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 5px;
+    box-shadow: var(--preto) 0px 0px 5px;
+    padding: 5px;
+}
+
 
 /* ---------------------- HEADER ---------------------- */
 header {
@@ -115,7 +159,7 @@ header {
 }
 
 /* ---------------------- HEADER MENU ---------------------- */
-.header_menu {
+header .header_menu {
     display: flex;
     font-family: 'Nunito Sans', sans-serif;
     flex-direction: column;
@@ -127,7 +171,7 @@ header {
     width: 25rem;
 }
 
-.container_menu {
+header .container_menu {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -135,7 +179,7 @@ header {
     padding: 10px;
 }
 
-.item_menu {
+header .item_menu {
     background: linear-gradient(to right, var(--cinza2), var(--preto));
     color: var(--branco);
     box-shadow: var(--cinza2) 0px 0px 5px;
@@ -146,7 +190,7 @@ header {
     text-align: center;
 }
 
-.item_menu:hover {
+header.item_menu:hover {
     transition: all 0.5s ease;
     background: linear-gradient(to left, var(--cinza2), var(--preto));
 }
@@ -159,6 +203,14 @@ main {
     width: 100%;
     height: 100%;
     background: var(--preto);
+}
+
+.resumo_mim h2 {
+    border-bottom: var(--cinza2) solid 2px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .sobre_mim {
@@ -300,29 +352,100 @@ main {
     font-size: 15px;
 }
 
-.projeto_desc .links {
+
+
+/* Outros Projetos */
+
+.outros_projetos {
+    background-color: var(--vinho);
+}
+
+.outros_projetos .sub_titulo {
+    margin: 0;
+    padding: 0;
+}
+
+.outros_projetos .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, var(--preto), var(--vinho));
+}
+
+.outros_projetos .menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 2rem;
-}
-
-.projeto_desc .links i {
-    font-size: 15px;
-}
-
-.projeto_desc .links a {
-    background: var(--cinza2);
-    padding: 1rem;
-    border-radius: 20px;
-    color: var(--branco);
-    text-align: center;
+    padding: 10px;
     font-family: 'Work Sans', sans-serif;
-    text-decoration: none;
+    font-weight: bold;
 }
 
-.projeto_desc .links a:hover {
-    transition: all 0.5s ease;
+.outros_projetos .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    background-color: var(--cinza2);
+    border-radius: 20px;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.outros_projetos .menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    gap: 5px;
+    box-shadow: var(--preto) 0px 5px 5px;
+}
+
+.outros_projetos .menu li:hover {
+    transition: all 0.3s ease;
     transform: scale(1.1);
-    box-shadow: var(--cinza1) 0px 0px 5px;
+    box-shadow: var(--cinza1) 0px 0px 10px;
+}
+
+/*PokeSearch*/
+.pokesearch {
+    display: grid;
+    grid-template-areas: 
+    "desc img";
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pokesearch_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.pokesearch_desc {
+    grid-area: desc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pokesearch_desc a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
 }

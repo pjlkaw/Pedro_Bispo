@@ -23,10 +23,10 @@
 
         <nav id="header_menu" class="header_menu">
             <ul class="container_menu">
-                <li class="item_menu">Sobre mim <i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Projetos <i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Habilidades <i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Contato <i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li class="item_menu">Sobre mim<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li class="item_menu">Projetos<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li class="item_menu">Habilidades<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li class="item_menu">Contato<i class="fa-solid fa-caret-down icon_menu"></i></li>
             </ul>
         </nav>
     </header>
@@ -38,16 +38,19 @@
         </section>
 
         <section class="resumo_mim">
-            <h2 class="sub_titulo">Desenvolvedor Front-End em constante evolução</h2>
+            <h2>Desenvolvedor Front-End em constante evolução</h2>
             <p>Sou um desenvolvedor Front-End em início de carreira, apaixonado por criar interfaces intuitivas e responsivas. A cada projeto, evoluo meu código, minha visão de design e minha paixão por tecnologia.</p>    
         </section>
 
         <section class="sobre_mim">
 
-            <h2 class="sub_titulo">Sobre mim</h2>
-            <div class="icon_paragrafo">
-                <i class="fa-solid fa-angles-down"></i>
+            <div class="sub_titulo">
+                <h2>Sobre Mim</h2>
+                <div class="icon">
+                    <i class="fa-solid fa-angles-down"></i>
+                </div>
             </div>
+            
 
             <div class="p_container">
                 <p>Olá! Meu nome é Pedro Bispo, sou um jovem que se dedica ao desenvolvimento Front-End. Comecei minha jornada na programação no final do ano passado, quando iniciei a faculdade de Análise e Desenvolvimento de Sistemas, mas logo percebi que queria um caminho mais dinâmico e prático. Por isso, optei por focar nos meus próprios estudos e cursos especializados.</p>
@@ -63,10 +66,13 @@
 
         <section class="projetos">
             <div>
-                <h2 class="sub_titulo">Projetos</h2>
-                <div class="icon_paragrafo">
-                    <i class="fa-solid fa-angles-down"></i>
+                <div class="sub_titulo">
+                    <h2>Projetos</h2>
+                    <div class="icon">
+                        <i class="fa-solid fa-angles-down"></i>
+                    </div>
                 </div>
+                
             </div>
 
             <div class="projeto_destaque">
@@ -97,13 +103,54 @@
                 </div>
             </div>
 
+            <!--Outros Projetos-->
+            <section class="outros_projetos">
+                <!--Menu e Subtitulo-->
+                <div class="container">
+                    <div class="sub_titulo">
+                        <h2>Outros Projetos</h2>
+                        <div class="icon">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </div>
+                    </div>
+                    
+                    <!--menu-->
+                    <div class="menu">
+                        <ul>
+                            <li class="item_menu">PokeSearch<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                            <li class="item_menu">AutoSender<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                            <li class="item_menu">NowWeather<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Projeto aparecerá aqui-->
+                <div id="conteudo_projeto">
+                    <!--
+                    <p>Selecione um dos projetos acima para visualizar</p>             
+                    -->
 
+                    <!--PokeSearch-->
+                    <div class="pokesearch">
+                        <div class="pokesearch_img">
+                            <img id="pokesearch_img" src="main/assets/PokeSearch.png" alt="">
+                        </div>
+                        <div class="pokesearch_desc">
+                            <h3>PokeSearch</h3>
+                            <p>O PokeSearch é uma aplicação web desenvolvida com foco em praticar o consumo de APIs públicas, utilizando a API do site <a href="https://pokeapi.co/" target="_blank">PokeAPI. </a> O projeto utiliza a PokéAPI para exibir informações detalhadas sobre os Pokémon pesquisados, como nome, tipo, habilidades e imagem.</p>
+                            <p>O projeto foi de grander importâcia para conhecer mais sobre o JavaScript, foi a minha primeira experiência com uma API. Além disso foi o projeto que fez eu entender como funciona Git e GitHub.</p>
 
+                            <div class="links">
+                                <a href="https://pjlkaw.github.io/PokeSearch/" target="_blank" >Site <i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/pjlkaw/PokeSearch" target="_blank">Código <i class="fa-solid fa-link"></i></a>
+                            </div>
+                            <div>
+                                <p>Fechar <i><i class="fa-solid fa-xmark"></i></i></p>
+                            </div>
+                        </div>
 
+                </div>
 
-
-
-
+            </section>
         </section>
 
     </main>
