@@ -1,0 +1,49 @@
+/*PokeSearch*/
+.pokesearch {
+    display: grid;
+    grid-template-areas: 
+    "desc img";
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, var(--vinho), var(--preto));
+    border-radius: 15px;
+}
+
+.pokesearch_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.pokesearch_desc {
+    grid-area: desc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pokesearch_desc a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pokesearch_desc .fechar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}

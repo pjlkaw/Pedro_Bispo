@@ -23,10 +23,9 @@
 
         <nav id="header_menu" class="header_menu">
             <ul class="container_menu">
-                <li class="item_menu">Sobre mim<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Projetos<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Habilidades<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li class="item_menu">Contato<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li id="sobre_mim" class="item_menu">Sobre mim<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li id="projetos" class="item_menu">Projetos<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                <li id="contato" class="item_menu">Contato<i class="fa-solid fa-caret-down icon_menu"></i></li>
             </ul>
         </nav>
     </header>
@@ -117,43 +116,73 @@
                     <!--menu-->
                     <div class="menu">
                         <ul>
-                            <li class="item_menu">PokeSearch<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                            <li class="item_menu">AutoSender<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                            <li class="item_menu">NowWeather<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                            <li class="item_menu" onclick="carregar_projeto('pokesearch')">PokeSearch<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                            <li class="item_menu" onclick="carregar_projeto('autosender')">AutoSender<i class="fa-solid fa-caret-down icon_menu"></i></li>
+                            <li class="item_menu" onclick="carregar_projeto('nowweather')">NowWeather<i class="fa-solid fa-caret-down icon_menu"></i></li>
                         </ul>
                     </div>
                 </div>
                 <!--Projeto aparecerá aqui-->
                 <div id="conteudo_projeto">
-                    <!--
-                    <p>Selecione um dos projetos acima para visualizar</p>             
-                    -->
-
-                    <!--PokeSearch-->
-                    <div class="pokesearch">
-                        <div class="pokesearch_img">
-                            <img id="pokesearch_img" src="main/assets/PokeSearch.png" alt="">
-                        </div>
-                        <div class="pokesearch_desc">
-                            <h3>PokeSearch</h3>
-                            <p>O PokeSearch é uma aplicação web desenvolvida com foco em praticar o consumo de APIs públicas, utilizando a API do site <a href="https://pokeapi.co/" target="_blank">PokeAPI. </a> O projeto utiliza a PokéAPI para exibir informações detalhadas sobre os Pokémon pesquisados, como nome, tipo, habilidades e imagem.</p>
-                            <p>O projeto foi de grander importâcia para conhecer mais sobre o JavaScript, foi a minha primeira experiência com uma API. Além disso foi o projeto que fez eu entender como funciona Git e GitHub.</p>
-
-                            <div class="links">
-                                <a href="https://pjlkaw.github.io/PokeSearch/" target="_blank" >Site <i class="fa-solid fa-link"></i></a>
-                                <a href="https://github.com/pjlkaw/PokeSearch" target="_blank">Código <i class="fa-solid fa-link"></i></a>
-                            </div>
-                            <div>
-                                <p>Fechar <i><i class="fa-solid fa-xmark"></i></i></p>
-                            </div>
-                        </div>
-
+                    <p>Selecione um dos projetos acima para visualizar</p>              
                 </div>
-
+                <div class="icon_paragrafo">
+                    <i class="fa-solid fa-code"></i>
+                </div>
             </section>
         </section>
 
+        <!--Contato-->
+        <section class="contato">
+            <div class="sub_titulo">
+                <h2>Contato</h2>
+                <div class="icon">
+                    <i class="fa-solid fa-angles-down"></i>
+                </div>
+            </div>
+            <div class="contato_desc">
+                <p>Para me conhecer mais, entre em contato atraves dos links abaixo.</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/pedro-bispo-9b4b5b234/" target="_blank" >Linkedin <i class="fa-brands fa-linkedin"></i></a>
+                    <p>pedrorochabispo@gmail.com <i><i class="fa-solid fa-envelope"></i></i></p>
+                    <a href="https://github.com/pjlkaw" target="_blank">Github <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--FeedBack-->
+        <section class="feedback">
+            <div class="sub_titulo">
+                <h2>Feedback</h2>
+            </div>
+            <div class="feedback_desc">
+                <p>Seu olhar também constrói. Me conta o que achou do projeto? Vale elogio, crítica ou ideia!</p>
+            </div>
+        
+
+            <!--form-->
+            <form action="mailto:pedrorochabispo@gmail.com" method="POST" enctype="text/plain">
+
+                <label for="name">Seu nome:</label>
+                <input type="text" name="name" placeholder="...">
+
+                <label for="email">Seu email:</label>
+                <input type="email" name="email" placeholder="seuemail@exemplo.com">
+                
+                <label for="mensagem">Comentário:</label>
+                <textarea name="mensagem" id="mensagem" rows="4" placeholder="..."></textarea></textarea>
+
+                <button type="submit">Enviar</button>
+                <p>Ao clicar em enviar, seu e-mail será aberto com a mensagem pronta.</p>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <p>Desenvolvido por Pedro Bispo</p>
+        <p>2025</p>
+        <p>Todos os direitos reservados©</p>
+    </footer>
 
     <script src="main/js/script.js"></script>
 </body>

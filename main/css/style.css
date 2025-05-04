@@ -65,6 +65,22 @@ p {
     font-size: 15px;
 }
 
+.links p {
+    font-size: 10px;
+    background: var(--cinza2);
+    border-radius: 20px;
+    color: var(--branco);
+    text-align: center; 
+    font-family: 'Work Sans', sans-serif;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.links p:hover {
+    transition: all 0.5s ease;
+    box-shadow: var(--cinza1) 0px 0px 10px;
+}
+
 .links a {
     background: var(--cinza2);
     padding: 1rem;
@@ -188,9 +204,13 @@ header .item_menu {
     cursor: pointer;
     width: 15rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-header.item_menu:hover {
+header .item_menu:hover {
     transition: all 0.5s ease;
     background: linear-gradient(to left, var(--cinza2), var(--preto));
 }
@@ -356,6 +376,12 @@ main {
 
 /* Outros Projetos */
 
+#conteudo_projeto {
+    margin: 0 auto;
+    transition: box-shadow 0.5s ease-in-out;
+    width: 90%;
+}
+
 .outros_projetos {
     background-color: var(--vinho);
 }
@@ -409,43 +435,112 @@ main {
     box-shadow: var(--cinza1) 0px 0px 10px;
 }
 
-/*PokeSearch*/
-.pokesearch {
-    display: grid;
-    grid-template-areas: 
-    "desc img";
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.pokesearch_img {
-    grid-area: img;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+/* Contato */
+.contato {
+    background: linear-gradient(to bottom, var(--vinho), var(--preto));
     width: 100%;
-    padding: 20px 0;
-}
-
-.pokesearch_desc {
-    grid-area: desc;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 15px;
-    padding: 15px;
-    width: 90%;
-    margin: 0 auto;
 }
 
-.pokesearch_desc a {
-    text-decoration: none;
-    color: var(--branco);
+.contato_desc p {
+    font-size: 20px;
+}
+
+.contato .contato_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    font-size: 15px;
+}
+
+/*feedback*/
+.feedback {
+    background: linear-gradient(to bottom, var(--preto), var(--cinza2));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    margin: 10px;
+    gap: 5px;
+    padding: 15px;
+    box-shadow: var(--branco) 0px 0px 5px;
+    border-radius: 10px;
+}
+
+.feedback label {
+    font-size: 15px;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+.feedback input {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--branco) 0px 0px 5px;
+    color: var(--preto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+.feedback textarea {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--branco) 0px 0px 5px;
+    color: var(--preto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+.feedback button {
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    color: var(--preto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    background-color: var(--cinza1);
     cursor: pointer;
 }
+
+.feedback button:hover{
+    box-shadow: var(--branco) 0px 0px 5px;
+    transition: all 0.3s ease;
+}
+
+.feedback form p {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+footer {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 10px;
+}
+
