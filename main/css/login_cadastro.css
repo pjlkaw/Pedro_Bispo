@@ -1,0 +1,53 @@
+/*login_cadastro*/
+.login_cadastro {
+    display: grid;
+    grid-template-areas: 
+    "img desc";
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, var(--roxo), var(--preto));
+    border-radius: 15px;
+}
+
+#login_cadastro_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 40rem;
+    height: 45rem;
+    padding: 20px 0;
+    margin: 20px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.login_cadastro_desc {
+    grid-area: desc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login_cadastro_desc a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login_cadastro_desc .fechar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}

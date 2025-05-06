@@ -89,6 +89,64 @@ function carregar_projeto(pokesearch) {
         });
 }
 
+function carregar_projeto(autosender) {
+    fetch('main/html/' + autosender + '.html')
+        .then(response => response.text())
+        .then(html => {
+            //carregar projeto
+            const projeto = document.getElementById('conteudo_projeto').innerHTML = html;
+            projeto.return;
+            //carregar css
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'main/css/' + autosender + '.css';
+            document.head.appendChild(link);
+            //fechar 
+            const fechar = document.querySelector('.fechar');
+            fechar.addEventListener('click', () => {
+                const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
+                projeto.return;
+            });
+            //scroll para conteudo do projeto
+            const conteudo_projeto = document.getElementById('conteudo_projeto');
+            conteudo_projeto.scrollIntoView({ behavior: 'smooth' });
+        }
+        )
+        .catch(error => {
+            alert('Erro ao carregar o projeto');
+            console.error(error);
+        });
+}
+
+function carregar_projeto (login_cadastro) {
+    fetch('main/html/' + login_cadastro + '.html')
+        .then(response => response.text())
+        .then(html => {
+            //carregar projeto
+            const projeto = document.getElementById('conteudo_projeto').innerHTML = html;
+            projeto.return;
+            //carregar css
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'main/css/' + login_cadastro + '.css';
+            document.head.appendChild(link);
+            //fechar 
+            const fechar = document.querySelector('.fechar');
+            fechar.addEventListener('click', () => {
+                const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
+                projeto.return;
+            });
+            //scroll para conteudo do projeto
+            const conteudo_projeto = document.getElementById('conteudo_projeto');
+            conteudo_projeto.scrollIntoView({ behavior: 'smooth' });
+        }
+        )
+        .catch(error => {
+            alert('Erro ao carregar o projeto');
+            console.error(error);
+        });
+}
+
 //Copiar email
 function copiar_email() {
     const email = document.querySelector('.links p');
