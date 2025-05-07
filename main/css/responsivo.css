@@ -103,11 +103,26 @@
     .contato p {
         text-align: center;
     }
+    
 
     .contato .links {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+    .feedback form {
+        width: 80%;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: auto;
     }
 }
 
