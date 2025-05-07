@@ -10,20 +10,7 @@
     border-radius: 15px;
 }
 
-#login_cadastro_img {
-    grid-area: img;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 40rem;
-    height: 45rem;
-    padding: 20px 0;
-    margin: 20px;
-    justify-content: center;
-    border-radius: 30px;
-}
+
 
 .login_cadastro_desc {
     grid-area: desc;

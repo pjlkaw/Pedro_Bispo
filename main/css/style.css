@@ -134,6 +134,35 @@ p {
     padding: 5px;
 }
 
+#autosender_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 35rem;
+    height: 40rem;
+    padding: 20px 0;
+    margin: 20px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+#login_cadastro_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 40rem;
+    height: 45rem;
+    padding: 20px 0;
+    margin: 20px;
+    justify-content: center;
+    border-radius: 30px;
+}
 
 /* ---------------------- HEADER ---------------------- */
 header {
@@ -287,6 +316,7 @@ main {
 
 .projetos {
     background-color: var(--roxo);
+    width: 100%;
 }
 
 /*projeto destaque*/
@@ -294,8 +324,7 @@ main {
     display: grid;
     grid-template-areas: 
     "img desc";
-    grid-template-columns: 4fr 3fr;
-    width: 100%;
+    grid-template-columns: 60% 40%;
     background: linear-gradient(to bottom, var(--roxo), var(--preto));
 }
 
