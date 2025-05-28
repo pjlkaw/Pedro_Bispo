@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     img_projeto_destaque();
     scroll_tela();
     copiar_email();
+    
 });
 
 // Imagens Projeto Destaque
@@ -43,13 +44,13 @@ function scroll_tela() {
     const sec_contato = document.querySelector('.contato .sub_titulo');
 
     menu_sobre_mim.addEventListener('click', () => {
-        sec_sobre_mim.scrollIntoView({ behavior: 'smooth' });
+        sec_sobre_mim.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
     menu_projetos.addEventListener('click', () => {
-        sec_projetos.scrollIntoView({ behavior: 'smooth' });
+        sec_projetos.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     menu_contato.addEventListener('click', () => {
-        sec_contato.scrollIntoView({ behavior: 'smooth' });
+        sec_contato.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
 }
@@ -75,7 +76,7 @@ function carregar_projeto(pokesearch) {
             });
             //scroll para conteudo do projeto
             const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth' });
+            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setInterval(() => {
                 conteudo_projeto.style.boxShadow = 'var(--branco) 0px 0px 10px';
                 setTimeout(() => {
@@ -109,7 +110,7 @@ function carregar_projeto(autosender) {
             });
             //scroll para conteudo do projeto
             const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth' });
+            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         )
         .catch(error => {
@@ -138,13 +139,24 @@ function carregar_projeto (login_cadastro) {
             });
             //scroll para conteudo do projeto
             const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth' });
+            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         )
         .catch(error => {
             alert('Erro ao carregar o projeto');
             console.error(error);
         });
+}
+
+
+//Fechar projeto retorna ao menu de projetos
+function fechar_projeto() {
+    const close = document.querySelector('.fechar');
+    const sec_menu = document.querySelector('.outros_projetos');
+
+    close.addEventListener('click', () => {
+        sec_menu.scrollIntoView({behavior: 'smooth', block: 'center'})
+    })
 }
 
 //Copiar email

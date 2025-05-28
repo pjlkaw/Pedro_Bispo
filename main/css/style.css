@@ -15,7 +15,7 @@
     --branco: #ecf0f1;
     --cinza1: #717d7e;
     --vinho:  #4b001f;
-    --roxo: #35003d;
+    --roxo: #24002a;
     --azul:#190046;
 }
 
@@ -94,7 +94,7 @@ p {
 }
 
 .links a:hover {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     transform: scale(1.1);
     box-shadow: var(--cinza1) 0px 0px 5px;
 }
@@ -239,10 +239,12 @@ header .item_menu {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: all 0.5s ease;
 }
 
 header .item_menu:hover {
-    transition: all 0.5s ease;
+    scale: 1.1;
+    box-shadow: var(--cinza1) 0px 0px 5px;
     background: linear-gradient(to left, var(--cinza2), var(--preto));
 }
 
@@ -281,6 +283,8 @@ main {
     font-weight: bold;
     padding: 10px;
     margin: 15px;
+    text-align: center;
+    transition: all 0.5s ease;
 }
 
 /* ----- RESUMO ----- */
@@ -293,6 +297,7 @@ main {
     width: 70%;
     gap: 10px;
     margin: 10px;
+    transition: all 0.5s ease;
 }
 
 /* ----- SOBRE MIM ----- */
@@ -350,6 +355,7 @@ main {
     width: 55rem;
     height: 30rem;
     box-shadow: var(--cinza1) 0px 0px 5px;
+    transition: all 0.5s ease;
 }
 
 .linha_img {
@@ -484,8 +490,26 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;
     font-size: 15px;
+}
+
+.contato .links {
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.contato .contato_link {
+    font-size: 15px;
+    width: 25rem;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.contato .contato_link:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
 }
 
 /*feedback*/
@@ -557,6 +581,7 @@ main {
 .feedback button:hover{
     box-shadow: var(--branco) 0px 0px 5px;
     transition: all 0.3s ease;
+    color: var(--branco);
 }
 
 .feedback form p {
