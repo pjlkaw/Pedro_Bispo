@@ -347,12 +347,11 @@ main {
 }
 
 .img_main {
-    width: 100%;
     max-height: 500px;
     object-fit: cover;
     border-radius: 10px;
     aspect-ratio: 16 / 9;
-    width: 55rem;
+    width: 40rem;
     height: 30rem;
     box-shadow: var(--cinza1) 0px 0px 5px;
     transition: all 0.5s ease;
@@ -385,6 +384,7 @@ main {
     align-items: center;
     gap: 10px;
     font-size: 15px;
+    width: 90%;
 }
 
 .projeto_desc h3 {
