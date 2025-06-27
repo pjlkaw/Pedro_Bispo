@@ -240,6 +240,7 @@ header .item_menu {
     justify-content: center;
     gap: 10px;
     transition: all 0.5s ease;
+    user-select: none;
 }
 
 header .item_menu:hover {
@@ -464,6 +465,7 @@ main {
     font-size: 15px;
     gap: 5px;
     box-shadow: var(--preto) 0px 5px 5px;
+    user-select: none;
 }
 
 .outros_projetos .menu li:hover {
