@@ -55,6 +55,27 @@ function scroll_tela() {
 
 }
 
+//função para todos os projetos - fechar e scroll
+function funcao_projeto() {
+    //fechar 
+    const fechar = document.querySelector('.fechar');
+    fechar.addEventListener('click', () => {
+        const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
+        projeto.return;
+    });
+    //scroll para conteudo do projeto
+    const conteudo_projeto = document.getElementById('conteudo_projeto');
+    conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    //Fechar projeto retorna ao menu de projetos
+    const close = document.querySelector('.fechar');
+    const sec_menu = document.querySelector('.outros_projetos');
+
+    close.addEventListener('click', () => {
+        sec_menu.scrollIntoView({behavior: 'smooth', block: 'center'})
+    })
+}
+
 //Carregar Projetos
 function carregar_projeto(pokesearch) {
     fetch('main/html/' + pokesearch + '.html')
@@ -68,26 +89,30 @@ function carregar_projeto(pokesearch) {
             link.rel = 'stylesheet';
             link.href = 'main/css/' + pokesearch + '.css';
             document.head.appendChild(link);
-            //fechar 
-            const fechar = document.querySelector('.fechar');
-            fechar.addEventListener('click', () => {
-                const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
-                projeto.return;
-            });
-            //scroll para conteudo do projeto
-            const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setInterval(() => {
-                conteudo_projeto.style.boxShadow = 'var(--branco) 0px 0px 10px';
-                setTimeout(() => {
-                    conteudo_projeto.style.boxShadow = 'none';
-                }, 1000)
-            }, 1000);
+            
+            funcao_projeto();
         })
         .catch(error => {
             alert('Erro ao carregar o projeto');
             console.error(error);
         });
+}
+
+function carregar_projeto(decode) {
+    fetch('main/html/' + decode + '.html')
+    .then(response => response.text())
+    .then(html => {
+        //carregar projeto
+        const projeto = document.getElementById('conteudo_projeto').innerHTML;
+        projeto.return
+        //css
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'main/css/' + decode + '.css'
+
+        funcao_projeto();
+    })
+
 }
 
 function carregar_projeto(autosender) {
@@ -102,15 +127,8 @@ function carregar_projeto(autosender) {
             link.rel = 'stylesheet';
             link.href = 'main/css/' + autosender + '.css';
             document.head.appendChild(link);
-            //fechar 
-            const fechar = document.querySelector('.fechar');
-            fechar.addEventListener('click', () => {
-                const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
-                projeto.return;
-            });
-            //scroll para conteudo do projeto
-            const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            funcao_projeto();
         }
         )
         .catch(error => {
@@ -131,32 +149,14 @@ function carregar_projeto (login_cadastro) {
             link.rel = 'stylesheet';
             link.href = 'main/css/' + login_cadastro + '.css';
             document.head.appendChild(link);
-            //fechar 
-            const fechar = document.querySelector('.fechar');
-            fechar.addEventListener('click', () => {
-                const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
-                projeto.return;
-            });
-            //scroll para conteudo do projeto
-            const conteudo_projeto = document.getElementById('conteudo_projeto');
-            conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            funcao_projeto();
         }
         )
         .catch(error => {
             alert('Erro ao carregar o projeto');
             console.error(error);
         });
-}
-
-
-//Fechar projeto retorna ao menu de projetos
-function fechar_projeto() {
-    const close = document.querySelector('.fechar');
-    const sec_menu = document.querySelector('.outros_projetos');
-
-    close.addEventListener('click', () => {
-        sec_menu.scrollIntoView({behavior: 'smooth', block: 'center'})
-    })
 }
 
 //Copiar email

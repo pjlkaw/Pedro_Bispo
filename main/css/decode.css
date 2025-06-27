@@ -1,8 +1,8 @@
-/*autosender*/
-.autosender {
+/*Decode*/
+.decode {
     display: grid;
     grid-template-areas: 
-    "img desc";
+    "desc img";
     grid-template-columns: 1fr 1fr;
     width: 90%;
     margin: 0 auto;
@@ -10,9 +10,21 @@
     border-radius: 15px;
 }
 
+#decode_img {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 30px;
+}
 
-
-.autosender_desc {
+.decode_desc {
     grid-area: desc;
     display: flex;
     flex-direction: column;
@@ -23,16 +35,17 @@
     padding: 15px;
     width: 90%;
     margin: 0 auto;
+    margin: 15px;
 }
 
-.autosender_desc a {
+.decode_desc a {
     text-decoration: none;
     color: var(--branco);
     font-weight: bold;
     cursor: pointer;
 }
 
-.autosender_desc .fechar {
+.decode_desc .fechar {
     display: flex;
     justify-content: center;
     width: 100%;

@@ -9,7 +9,6 @@
 
 /* ---------------------- CORES ---------------------- */
 :root {
-    --roxo: #200d23;
     --cinza2: #2c2e2f;
     --preto: rgb(5, 5, 5);
     --branco: #ecf0f1;
@@ -28,7 +27,7 @@
 }
 
 body {
-    background-color: var(--preto);
+    background-color: var(--roxo);
     color: var(--branco);
 }
 
@@ -105,6 +104,7 @@ p {
     align-items: center;
     font-size: 15px;
     padding: 10px;
+    width: 100%;
 }
 
 .fade-out {
@@ -420,7 +420,7 @@ main {
 }
 
 .outros_projetos {
-    background-color: var(--vinho);
+    background-color: var(--roxo);
 }
 
 .outros_projetos .sub_titulo {
@@ -432,7 +432,7 @@ main {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom, var(--preto), var(--vinho));
+    background: linear-gradient(to bottom, var(--preto), var(--roxo));
 }
 
 .outros_projetos .menu {
@@ -474,7 +474,7 @@ main {
 
 /* Contato */
 .contato {
-    background: linear-gradient(to bottom, var(--vinho), var(--preto));
+    background: linear-gradient(to bottom, var(--roxo), var(--preto));
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -502,7 +502,7 @@ main {
 
 .contato .contato_link {
     font-size: 15px;
-    width: 25rem;
+    width: 85%;
     height: auto;
     transition: all 0.3s ease;
 }
