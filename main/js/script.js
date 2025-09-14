@@ -3,8 +3,28 @@ document.addEventListener("DOMContentLoaded", function() {
     img_projeto_destaque();
     scroll_tela();
     copiar_email();
-    
+    curriculo();
 });
+
+
+// Curriculo 
+function curriculo() {
+    const conteudo = document.getElementById('conteudo_port')
+    const btn_c = document.getElementById("btn_curriculo")
+    btn_c.addEventListener('click', () => {
+        if (btn_c.textContent === "Mostrar") {
+            btn_c.textContent = "Ocultar"
+            conteudo.style.display = "block";
+            conteudo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        else if (btn_c.textContent === "Ocultar") {
+            btn_c.textContent = "Mostrar"
+            conteudo.style.display = "none";
+        }
+    })
+}
+
+
 
 // Imagens Projeto Destaque
 function img_projeto_destaque() {
