@@ -362,7 +362,7 @@ main {
     border: var(--cinza2) solid 3px;
     border-radius: 25px;
     margin: 20px auto;
-    width: 60%;
+    width: 90%;
 }
 
 .conteudo_port .nome {
