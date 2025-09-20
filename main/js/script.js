@@ -20,6 +20,7 @@ function curriculo() {
         else if (btn_c.textContent === "Ocultar") {
             btn_c.textContent = "Mostrar"
             conteudo.style.display = "none";
+            btn_c.scrollIntoView({behavior : 'smooth', block: 'center' })
         }
     })
 }
