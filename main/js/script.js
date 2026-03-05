@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     img_projeto_destaque();
     scroll_tela();
     copiar_email();
-    curriculo();
+    conhecimento();
 });
 
 
 // Curriculo 
-function curriculo() {
+function conhecimento() {
     const conteudo = document.getElementById('conteudo_port')
-    const btn_c = document.getElementById("btn_curriculo")
+    const btn_c = document.getElementById("btn_conhecimento");
     btn_c.addEventListener('click', () => {
         if (btn_c.textContent === "Mostrar") {
             btn_c.textContent = "Ocultar"
