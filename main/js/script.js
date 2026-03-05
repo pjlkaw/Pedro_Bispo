@@ -54,18 +54,23 @@ function img_projeto_destaque() {
     });
 }    
 
-// Scroll tela
+// Scroll tela --------- tem como melhorar
 function scroll_tela() {
     const menu_sobre_mim = document.getElementById('sobre_mim');
+    const menu_conhecimento = document.getElementById('conhecimento');
     const menu_projetos = document.getElementById('projetos');
     const menu_contato = document.getElementById('contato');
 
     const sec_sobre_mim = document.querySelector('.sobre_mim .sub_titulo');
+    const sec_conhecimento = document.querySelector('.conhecimento .sub_titulo');
     const sec_projetos = document.querySelector('.projetos .sub_titulo');
     const sec_contato = document.querySelector('.contato .sub_titulo');
 
     menu_sobre_mim.addEventListener('click', () => {
         sec_sobre_mim.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    menu_conhecimento.addEventListener('click', () => {
+        sec_conhecimento.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
     menu_projetos.addEventListener('click', () => {
         sec_projetos.scrollIntoView({ behavior: 'smooth', block: 'start' });
