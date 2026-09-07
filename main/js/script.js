@@ -1,202 +1,218 @@
-//Inicializar Funções com o doc
-document.addEventListener("DOMContentLoaded", function() {
-    img_projeto_destaque();
-    scroll_tela();
-    copiar_email();
-    conhecimento();
+const projects = [
+    {
+        name: 'StepUp',
+        category: 'E-commerce concept',
+        image: 'main/assets/StepUp_logo.jpg',
+        summary: 'Projeto de conceito para loja digital com foco em marca, UX e visual moderno.',
+        description: 'O StepUp foi criado para unir identidade visual, organização de conteúdo e desenvolvimento front-end em um projeto coeso. A ideia foi apresentar uma loja virtual com uma marca forte, navegação clara e visual impactante.',
+        details: [
+            'Criação de identidade visual e proposta de marca.',
+            'Estrutura modular para facilitar ajustes e manutenção.',
+            'Layout responsivo pensado para diferentes dispositivos.',
+        ],
+        tech: ['HTML', 'CSS', 'JavaScript', 'Figma'],
+        links: [
+            { label: 'Site', url: 'https://pjlkaw.github.io/StepUp/' },
+            { label: 'Código', url: 'https://github.com/pjlkaw/StepUp' }
+        ]
+    },
+    {
+        name: 'PokeSearch',
+        category: 'API + busca',
+        image: 'main/assets/PokeSearch.png',
+        summary: 'Aplicação para consultar informações de Pokémon usando a PokeAPI.',
+        description: 'Este projeto foi essencial para entender consumo de APIs públicas e lógica de interação com dados dinâmicos. A aplicação busca e apresenta informações como nome, habilidades, tipos e imagem dos Pokémon.',
+        details: [
+            'Consumo de API pública com JavaScript.',
+            'Manipulação dinâmica de dados e renderização.',
+            'Interface simples e direta para visualização de resultados.',
+        ],
+        tech: ['HTML', 'CSS', 'JavaScript', 'API'],
+        links: [
+            { label: 'Site', url: 'https://pjlkaw.github.io/PokeSearch/' },
+            { label: 'Código', url: 'https://github.com/pjlkaw/PokeSearch' }
+        ]
+    },
+    {
+        name: 'DeCode',
+        category: 'Ferramenta de codificação',
+        image: 'main/assets/decode_img.png',
+        summary: 'Aplicação para converter textos em diversas formas de codificação.',
+        description: 'O DeCode foi um projeto dedicado a praticar lógica de programação e manipulação do DOM. Ele permite explorar diferentes métodos de codificação e decodificação em uma interface didática.',
+        details: [
+            'Prática com lógica condicional e estruturas de repetição.',
+            'Manipulação do DOM com JavaScript.',
+            'Exploração de métodos como Base64, César, Morse e ROT13.',
+        ],
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        links: [
+            { label: 'Site', url: 'https://pjlkaw.github.io/decode' },
+            { label: 'Código', url: 'https://github.com/pjlkaw/decode' }
+        ]
+    },
+    {
+        name: 'AutoSender',
+        category: 'Automação',
+        image: 'main/assets/autosender_img.png',
+        summary: 'Script em Python para automatizar envio de mensagens via WhatsApp Web.',
+        description: 'O AutoSender foi desenvolvido para explorar automação de tarefas em Python e integração com interfaces externas. O projeto ajudou a praticar lógica, controle de tempo e estrutura de scripts.',
+        details: [
+            'Uso de Python para tarefas automatizadas.',
+            'Automação de mensagens por WhatsApp Web.',
+            'Aplicação prática de lógica e organização de código.',
+        ],
+        tech: ['Python'],
+        links: [
+            { label: 'Código', url: 'https://github.com/pjlkaw/autosender' }
+        ]
+    },
+    {
+        name: 'Login & Signup',
+        category: 'Back-end básico',
+        image: 'main/assets/cadastro_login.png',
+        summary: 'Sistema simples de cadastro e login com Node.js e persistência em JSON.',
+        description: 'Este projeto foi uma introdução prática ao desenvolvimento back-end, com cadastro, autenticação e armazenamento em arquivo JSON. Também foi importante para entender rotas e fluxo de requisições.',
+        details: [
+            'Estrutura básica de autenticação.',
+            'Persistência de dados em JSON.',
+            'Introdução ao Node.js e lógica server-side.',
+        ],
+        tech: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+        links: [
+            { label: 'Site', url: 'https://pjlkaw.github.io/login_cadastro' },
+            { label: 'Código', url: 'https://github.com/pjlkaw/login_cadastro' }
+        ]
+    }
+];
+
+function renderProjects() {
+    const container = document.getElementById('projects-grid');
+    if (!container) return;
+
+    container.innerHTML = projects.map((project) => `
+        <article class="project-card" data-project="${project.name}">
+            <img src="${project.image}" alt="${project.name}">
+            <div class="project-body">
+                <span>${project.category}</span>
+                <h3>${project.name}</h3>
+                <p>${project.summary}</p>
+                <div class="project-meta">
+                    ${project.tech.slice(0, 3).map((tag) => `<span>${tag}</span>`).join('')}
+                </div>
+            </div>
+        </article>
+    `).join('');
+
+    container.querySelectorAll('.project-card').forEach((card) => {
+        card.addEventListener('click', () => {
+            const selected = projects.find((project) => project.name === card.dataset.project);
+            if (!selected) return;
+            openProjectModal(selected);
+        });
+    });
+}
+
+function openProjectModal(project) {
+    const modal = document.getElementById('project-modal');
+    const modalBody = document.getElementById('modal-body');
+
+    if (!modal || !modalBody) return;
+
+    modalBody.innerHTML = `
+        <img src="${project.image}" alt="${project.name}">
+        <h3 id="modal-title">${project.name}</h3>
+        <p>${project.description}</p>
+        <ul>
+            ${project.details.map((item) => `<li>${item}</li>`).join('')}
+        </ul>
+        <div class="links">
+            ${project.links.map((link) => `<a href="${link.url}" target="_blank" rel="noreferrer">${link.label} <i class="fa-solid fa-link"></i></a>`).join('')}
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('project-modal');
+    if (!modal) return;
+
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+}
+
+function initEmailCopy() {
+    const buttons = document.querySelectorAll('[data-email]');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', async () => {
+            const email = button.dataset.email;
+
+            try {
+                await navigator.clipboard.writeText(email);
+                const originalText = button.innerHTML;
+                button.innerHTML = 'E-mail copiado! <i class="fa-solid fa-check"></i>';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 1200);
+            } catch (error) {
+                window.location.href = `mailto:${email}`;
+            }
+        });
+    });
+}
+
+function initModalControls() {
+    const modal = document.getElementById('project-modal');
+    if (!modal) return;
+
+    const closeButton = modal.querySelector('.modal-close');
+    const backdrop = modal.querySelector('[data-close="true"]');
+
+    closeButton?.addEventListener('click', closeProjectModal);
+    backdrop?.addEventListener('click', closeProjectModal);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeProjectModal();
+        }
+    });
+}
+
+function initPageNavigation() {
+    const header = document.querySelector('.site-header');
+    const pageLinks = document.querySelectorAll('[data-page]');
+
+    if (!header || !pageLinks.length) return;
+
+    const setPage = (page) => {
+        const aboutMode = page === 'about';
+        header.classList.toggle('about-mode', aboutMode);
+
+        const aboutView = document.getElementById('about');
+        aboutView?.setAttribute('aria-hidden', String(!aboutMode));
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    pageLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            setPage(link.dataset.page);
+            history.replaceState(null, '', link.getAttribute('href'));
+        });
+    });
+
+    if (window.location.hash === '#about') {
+        setPage('about');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderProjects();
+    initEmailCopy();
+    initModalControls();
+    initPageNavigation();
 });
-
-
-// Curriculo 
-function conhecimento() {
-    const conteudo = document.getElementById('conteudo_port')
-    const btn_c = document.getElementById("btn_conhecimento");
-    btn_c.addEventListener('click', () => {
-        if (btn_c.textContent === "Mostrar") {
-            btn_c.textContent = "Ocultar"
-            conteudo.style.display = "block";
-            conteudo.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        else if (btn_c.textContent === "Ocultar") {
-            btn_c.textContent = "Mostrar"
-            conteudo.style.display = "none";
-            btn_c.scrollIntoView({behavior : 'smooth', block: 'center' })
-        }
-    })
-}
-
-
-
-// Imagens Projeto Destaque
-function img_projeto_destaque() {
-    const main = document.getElementById('img_principal');
-    const mini = document.querySelectorAll('.mini');
-
-    mini.forEach(img => {
-        img.addEventListener('click', () => {
-            const mainSrc = main.getAttribute('src');
-            const clickedSrc = img.getAttribute('src');
-
-            main.classList.add('fade-out');
-
-            setTimeout(() => {
-                main.setAttribute('src', clickedSrc);
-                main.classList.remove('fade-out');
-                main.classList.add('fade-in');
-
-                img.setAttribute('src', mainSrc);
-            }, 200);
-
-            setTimeout(() => {
-                main.classList.remove('fade-in');
-            }, 400);
-        });
-    });
-}    
-
-// Scroll tela --------- tem como melhorar
-function scroll_tela() {
-    const menu_sobre_mim = document.getElementById('sobre_mim');
-    const menu_conhecimento = document.getElementById('conhecimento');
-    const menu_projetos = document.getElementById('projetos');
-    const menu_contato = document.getElementById('contato');
-
-    const sec_sobre_mim = document.querySelector('.sobre_mim .sub_titulo');
-    const sec_conhecimento = document.querySelector('.conhecimento .sub_titulo');
-    const sec_projetos = document.querySelector('.projetos .sub_titulo');
-    const sec_contato = document.querySelector('.contato .sub_titulo');
-
-    menu_sobre_mim.addEventListener('click', () => {
-        sec_sobre_mim.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-    menu_conhecimento.addEventListener('click', () => {
-        sec_conhecimento.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-    menu_projetos.addEventListener('click', () => {
-        sec_projetos.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-    menu_contato.addEventListener('click', () => {
-        sec_contato.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-}
-
-//função para todos os projetos - fechar e scroll
-function funcao_projeto() {
-    //fechar 
-    const fechar = document.querySelector('.fechar');
-    fechar.addEventListener('click', () => {
-        const projeto = document.getElementById('conteudo_projeto').innerHTML = '';
-        projeto.return;
-    });
-    //scroll para conteudo do projeto
-    const conteudo_projeto = document.getElementById('conteudo_projeto');
-    conteudo_projeto.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    //Fechar projeto retorna ao menu de projetos
-    const close = document.querySelector('.fechar');
-    const sec_menu = document.querySelector('.outros_projetos');
-
-    close.addEventListener('click', () => {
-        sec_menu.scrollIntoView({behavior: 'smooth', block: 'center'})
-    })
-}
-
-//Carregar Projetos
-function carregar_projeto(pokesearch) {
-    fetch('main/html/' + pokesearch + '.html')
-        .then(response => response.text())
-        .then(html => {
-            //carregar projeto
-            const projeto = document.getElementById('conteudo_projeto').innerHTML = html;
-            projeto.return;
-            //carregar css
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'main/css/' + pokesearch + '.css';
-            document.head.appendChild(link);
-            
-            funcao_projeto();
-        })
-        .catch(error => {
-            alert('Erro ao carregar o projeto');
-            console.error(error);
-        });
-}
-
-function carregar_projeto(decode) {
-    fetch('main/html/' + decode + '.html')
-    .then(response => response.text())
-    .then(html => {
-        //carregar projeto
-        const projeto = document.getElementById('conteudo_projeto').innerHTML;
-        projeto.return
-        //css
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'main/css/' + decode + '.css'
-
-        funcao_projeto();
-    })
-
-}
-
-function carregar_projeto(autosender) {
-    fetch('main/html/' + autosender + '.html')
-        .then(response => response.text())
-        .then(html => {
-            //carregar projeto
-            const projeto = document.getElementById('conteudo_projeto').innerHTML = html;
-            projeto.return;
-            //carregar css
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'main/css/' + autosender + '.css';
-            document.head.appendChild(link);
-            
-            funcao_projeto();
-        }
-        )
-        .catch(error => {
-            alert('Erro ao carregar o projeto');
-            console.error(error);
-        });
-}
-
-function carregar_projeto (login_cadastro) {
-    fetch('main/html/' + login_cadastro + '.html')
-        .then(response => response.text())
-        .then(html => {
-            //carregar projeto
-            const projeto = document.getElementById('conteudo_projeto').innerHTML = html;
-            projeto.return;
-            //carregar css
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'main/css/' + login_cadastro + '.css';
-            document.head.appendChild(link);
-            
-            funcao_projeto();
-        }
-        )
-        .catch(error => {
-            alert('Erro ao carregar o projeto');
-            console.error(error);
-        });
-}
-
-//Copiar email
-function copiar_email() {
-    const email = document.querySelector('.links p');
-
-    email.addEventListener('click', () => {
-        const text = email.textContent;
-        navigator.clipboard.writeText(text)
-            .then(() => {
-                alert('Email copiado!');
-            })
-            .catch(() => {
-                alert('Erro ao copiar email!');
-            });
-    })
-}

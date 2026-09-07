@@ -1,287 +1,203 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Bispo</title>
+    <meta name="description" content="Portfólio de Pedro Bispo, desenvolvedor front-end com foco em interfaces modernas, responsivas e de alto impacto.">
+    <title>Pedro Bispo | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="main/css/style.css">
-    <link rel="stylesheet" href="main/css/responsivo.css">
-
 </head>
 <body>
-    <header>
-        <div class="header_container">
-            <div class="header_name">
-                <h1>Pedro Bispo</h1>    
-                <h2>Web Designer</h2>
+    <header class="site-header">
+        <nav class="topbar container" aria-label="Menu principal">
+            <a class="brand" href="#home" data-page="home">Pedro Bispo</a>
+            <div class="nav-links">
+                <a href="#about" data-page="about">Sobre</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </div>
+            <a class="button button-ghost" href="#contact">Fale comigo</a>
+        </nav>
+
+        <div id="home" class="hero container page-view">
+            <div class="hero-copy">
+                <span class="eyebrow">Front-End Developer</span>
+                <h1>Pedro Bispo</h1>
+                <p>
+                    Desenvolvedor full-stack em formação,  .
+                </p>
+                <div class="hero-actions">
+                    <a class="button" href="#projects">Ver projetos</a>
+                    <a class="button button-secondary" href="#about" data-page="about">Sobre mim</a>
+                </div>
+                <ul class="quick-stats" aria-label="Estatísticas pessoais">
+                    <li><strong>18+</strong><span>anos</span></li>
+                    <li><strong>5+</strong><span>projetos</span></li>
+                    <li><strong>100%</strong><span>dedicado</span></li>
+                </ul>
+            </div>
+
+            <div class="hero-visual">
+                <div class="photo-frame">
+                    <img src="main/assets/pedrofoto.jpg" alt="Pedro Bispo">
+                </div>
             </div>
         </div>
 
-        <div class="img_container">
-            <img class="header_img" src="main/assets/pedrofoto.jpg" alt="Foto de Pedro Bispo">
-        </div>
+        <section id="about" class="about-view section container page-view" aria-hidden="true">
+            <div class="section-heading">
+                <span class="section-kicker">Sobre mim</span>
+                <h2>Desenvolvedor com foco em interface, funcionalidade e evolução contínua.</h2>
+            </div>
 
-        <nav id="header_menu" class="header_menu">
-            <ul class="container_menu">
-                <li id="sobre_mim" class="item_menu">Sobre mim<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li id="conhecimento" class="item_menu">Conhecimento <i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li id="projetos" class="item_menu">Projetos<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                <li id="contato" class="item_menu">Contato<i class="fa-solid fa-caret-down icon_menu"></i></li>
-            </ul>
-        </nav>
+            <div class="about-grid">
+                <div class="about-card">
+                    <p>
+                        Olá! Meu nome é Pedro Bispo e sou estudante de Engenharia de Computação e Informática para Internet.
+                        Tenho me dedicado ao desenvolvimento front-end com HTML, CSS, JavaScript e design de interfaces.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <p>
+                        Ao longo do tempo, venho construindo projetos práticos, experimentando novas tecnologias e buscando criar
+                        experiências agradáveis, responsivas e bem estruturadas.
+                    </p>
+                </div>
+                <div class="about-card highlight">
+                    <p>
+                        Meu objetivo é continuar evoluindo como profissional, combinando tecnologia, estética e boa usabilidade para
+                        entregar soluções que realmente fazem sentido para as pessoas.
+                    </p>
+                </div>
+            </div>
+
+            <a class="button button-secondary about-back" href="#home" data-page="home">
+                <i class="fa-solid fa-arrow-left"></i> Voltar ao início
+            </a>
+        </section>
     </header>
 
     <main>
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-kicker">Skills</span>
+                    <h2>Tecnologias que utilizo e estou aprofundando.</h2>
+                </div>
 
-        <section class="frase_container">
-            <h3 class="frase">Acreditar em suas metas é o primeiro passo</h3>
-        </section>
-
-        <section class="resumo_mim">
-            <h2>Desenvolvedor Front-End em constante evolução</h2>
-            <p>Front-End Developer em formação, construindo interfaces web com HTML, CSS e JavaScript e sempre buscando evoluir através de novos projetos.</p>   
-        </section>
-
-        <section class="sobre_mim">
-
-            <div class="sub_titulo">
-                <h2>Sobre Mim</h2>
-                <div class="icon">
-                    <i class="fa-solid fa-angles-down"></i>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                    <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                    <div class="skill-item"><i class="fa-brands fa-npm"></i><span>NPM</span></div>
                 </div>
             </div>
-            
-
-            <div class="p_container">
-                <p>Olá! Meu nome é Pedro Bispo,
-                <p>Tenho 18 anos e sou estudante de Engenharia de Computação e Informática para Internet. Foco meus estudos em desenvolvimento Front-End, utilizando HTML, CSS e JavaScript para criar interfaces funcionais e bem estruturadas.</p>
-                <p>Tenho experiência prática com manutenção de sistemas web, prototipação de interfaces no Figma e desenvolvimento de projetos próprios, onde exploro tanto programação quanto design para construir soluções completas.</p>
-                <p class="p_final">Meu objetivo é continuar evoluindo como desenvolvedor, criando soluções digitais eficientes e aprimorando minhas habilidades a cada novo desafio.</p>
-            </div>
-
-            <div class="icon_paragrafo">
-                <i class="fa-solid fa-code"></i>
-            </div>
         </section>
 
-        <section class="conhecimento">
-            <div class="sub_titulo">
-                <h2>Conhecimento</h2> <!-- Curriculo-->
-                <div class="icon">
-                    <i class="fa-solid fa-angles-down"></i>
-                </div>
+        <section id="featured" class="section container">
+            <div class="section-heading">
+                <span class="section-kicker">Projeto destaque</span>
+                <h2>StepUp</h2>
             </div>
 
-            <section class="conteudo_port" id="conteudo_port" style="display: none;"> 
-                
-                <section class="tec">
-                    <section class="tec">
-                        <div class="tec_container">
-                            <div class="tec_item">
-                                <span>HTML</span>
-                                <i class="fa-brands fa-html5"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>CSS</span>
-                                <i class="fa-brands fa-css3"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>JavaScript</span>
-                                <i class="fa-brands fa-js"></i>
-                            </div>
-                            <!-- <div class="tec_item">
-                                <span>Node.js</span>
-                                <i class="fa-brands fa-node-js"></i>
-                            </div> -->
-                            <div class="tec_item">
-                                <span>Python</span>
-                                <i class="fa-brands fa-python"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>Figma </span>
-                                <i class="fa-brands fa-figma"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>Bootstrap</span> <!--Embora não tenho usado nesse projeto-->
-                                <i class="fa-brands fa-bootstrap"></i> <!-- Possivel restruturação desse projeto porém em HTML-->
-                            </div>
-                            <div class="tec_item">
-                                <span>Git</span>
-                                <i class="fa-brands fa-git-alt"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>SQL</span>
-                                <i class="fa-solid fa-database"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>AI</span>
-                                <i class="fa-solid fa-robot"></i>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section class="tec">
-                        <h3 class="tec_subtitulo">Atualmente estudando</h3>
-                        <div class="tec_container">
-                            <div class="tec_item">
-                                <span>React</span>
-                                <i class="fa-brands fa-react"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>MySQL</span>
-                                <i class="fa-solid fa-database"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>Node.js</span>
-                                <i class="fa-brands fa-node-js"></i>
-                            </div>
-                            <div class="tec_item">
-                                <span>NPM</span>
-                                <i class="fa-brands fa-npm"></i>
-                            </div>
-                        </div>
-                    </section>
-                    
-                </section>
-
-            </section>
-                
-            <button id="btn_conhecimento">Mostrar</button>
-            
-            <div class="icon_paragrafo">
-                <i class="fa-solid fa-code"></i>
-            </div>
-        </section>
-
-        <section class="projetos">
-            <div>
-                <div class="sub_titulo">
-                    <h2>Projetos</h2>
-                    <div class="icon">
-                        <i class="fa-solid fa-angles-down"></i>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="projeto_destaque">
-                <div class="projeto_img">
-                    <img id="img_principal" class="img_main" src="main/assets/StepUp_logo.jpg" alt="">
-
-                    <div class="linha_img">
-                        <img class="mini" src="main/assets/StepUp_header.jpg" alt="">
-                        <img class="mini" src="main/assets/StepUp_sobre.jpg" alt="">
-                        <img class="mini" src="main/assets/StepUp_produtos.jpg" alt="">    
+            <article class="featured-project">
+                <div class="featured-media">
+                    <img src="main/assets/StepUp_logo.jpg" alt="Projeto StepUp">
+                    <div class="thumbnail-row">
+                        <img src="main/assets/StepUp_header.jpg" alt="Detalhe do projeto StepUp">
+                        <img src="main/assets/StepUp_sobre.jpg" alt="Sobre o projeto StepUp">
+                        <img src="main/assets/StepUp_produtos.jpg" alt="Produtos do projeto StepUp">
                     </div>
                 </div>
 
-                <div class="projeto_desc">
-                    <h3>Projeto Favorito <i class="fa-solid fa-star"></i></h3>
-                    <p>O StepUp foi criado como um projeto conceito para demonstrar minhas habilidades em criação de marca, design de interface e desenvolvimento front-end. Desde a concepção da identidade visual até a implementação, foquei em proporcionar uma experiência visual e funcionalmente impactante, aplicando os princípios de responsividade, usabilidade e boas práticas de código.</p>
+                <div class="featured-copy">
+                    <h3>Uma identidade visual pensada para impactar.</h3>
+                    <p>
+                        O StepUp foi um projeto conceitual criado para explorar marca, interface e desenvolvimento front-end em conjunto.
+                        A ideia foi criar uma experiência visual forte, com boa organização, responsividade e foco em UX.
+                    </p>
                     <ul>
-                        <li> <strong>Identidade Visual:</strong> Desenvolvi uma identidade única para o projeto, incluindo logo, paleta de cores e tipografia, criando uma aparência coesa e profissional.</li>
-                        <li> <strong>Responsividade e Usabilidade:</strong> A aplicação foi projetada para garantir uma navegação fluida em diferentes dispositivos, mantendo a funcionalidade e estética adaptáveis a qualquer tamanho de tela.
-                        </li>
-                        <li> <strong>Estrutura Modular</strong> O código foi estruturado de forma eficiente e modular, permitindo fácil manutenção e personalização. Por exemplo, a troca de toda a paleta de cores do site pode ser realizada com uma simples alteração em uma única linha de código, o que facilita futuras atualizações.</li>
+                        <li>Criação de identidade visual e proposta de marca.</li>
+                        <li>Layout adaptado para diferentes tamanhos de tela.</li>
+                        <li>Estrutura modular para facilitar manutenção e evolução.</li>
                     </ul>
-                    <p>Esse projeto reflete minha dedicação em criar soluções práticas e inovadoras, alinhadas com as melhores práticas de desenvolvimento front-end.</p>
                     <div class="links">
-                        <a href="https://pjlkaw.github.io/StepUp/" target="_blank" >Site <i class="fa-solid fa-link"></i></a>
-                        <a href="https://github.com/pjlkaw/StepUp" target="_blank">Código <i class="fa-solid fa-link"></i></a>
+                        <a href="https://pjlkaw.github.io/StepUp/" target="_blank" rel="noreferrer">Site <i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/pjlkaw/StepUp" target="_blank" rel="noreferrer">Código <i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-            </div>
-
-            <!--Outros Projetos-->
-            <section class="outros_projetos">
-                <!--Menu e Subtitulo-->
-                <div class="container">
-                    <div class="sub_titulo">
-                        <h2>Outros Projetos</h2>
-                        <div class="icon">
-                            <i class="fa-solid fa-angles-down"></i>
-                        </div>
-                    </div>
-                    
-                    <!--menu-->
-                    <div class="menu">
-                        <ul>
-                            <li class="item_menu" onclick="carregar_projeto('pokesearch')">PokeSearch<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                            <li class="item_menu" onclick="carregar_projeto('decode')">DeCode<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                            <li class="item_menu" onclick="carregar_projeto('autosender')">AutoSender<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                            <li class="item_menu" onclick="carregar_projeto('login_cadastro')">Login & Signup<i class="fa-solid fa-caret-down icon_menu"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--Projeto aparecerá aqui-->
-                <div id="conteudo_projeto">
-
-
-
-                    <p>Selecione um dos projetos acima para visualizar</p>              
-                </div>
-                <div class="icon_paragrafo">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-            </section>
+            </article>
         </section>
 
-        <!--Contato-->
-        <section class="contato">
-            <div class="sub_titulo">
-                <h2>Contato</h2>
-                <div class="icon">
-                    <i class="fa-solid fa-angles-down"></i>
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-kicker">Projetos</span>
+                    <h2>Experimentos, soluções e desafios que me ajudaram a evoluir.</h2>
                 </div>
-            </div>
-            <div class="contato_desc">
-                <p>Para me conhecer mais, entre em contato atraves dos links abaixo.</p>
-                <div class="links">
-                    <a class="contato_link" href="https://www.linkedin.com/in/pedro-bispo-603191309?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxPCXIfNKTgO0W4PPD%2FDpow%3D%3D" target="_blank" >Linkedin <i class="fa-brands fa-linkedin"></i></a>
-                    <p class="contato_link" >pedrorochabispo@gmail.com <i><i class="fa-solid fa-envelope"></i></i></p>
-                    <a class="contato_link" href="https://github.com/pjlkaw" target="_blank">Github <i class="fa-brands fa-github"></i></a>
-                </div>
+
+                <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
             </div>
         </section>
 
-        <!--FeedBack-->
-        <section class="feedback">
-            <div class="sub_titulo">
-                <h2>Feedback</h2>
+        <section id="contact" class="section container">
+            <div class="section-heading center">
+                <span class="section-kicker">Contato</span>
+                <h2>Vamos conversar sobre ideias, projetos e oportunidades.</h2>
             </div>
-            <div class="feedback_desc">
-                <p>Seu olhar também constrói. Me conta o que achou do projeto? Vale elogio, crítica ou ideia!</p>
+
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/pedro-bispo-603191309" target="_blank" rel="noreferrer">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                <button type="button" class="copy-email" data-email="pedrorochabispo@gmail.com">pedrorochabispo@gmail.com <i class="fa-solid fa-envelope"></i></button>
+                <a href="https://github.com/pjlkaw" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github"></i></a>
             </div>
-        
+        </section>
 
-            <!--form-->
-            <form action="https://formspree.io/f/mzzawwnn" method="POST">
-                <input type="hidden" name="_next" value="thanks.html">
-                <input type="hidden" name="_language" value="pt-BR">
+        <section id="feedback" class="section section-feedback">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-kicker">Feedback</span>
+                    <h2>Seu olhar também constrói.</h2>
+                </div>
 
+                <form class="feedback-form" action="https://formspree.io/f/mzzawwnn" method="POST">
+                    <label for="name">Seu nome</label>
+                    <input id="name" name="name" type="text" placeholder="Digite seu nome" required>
 
+                    <label for="email">Seu e-mail</label>
+                    <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
 
-                <label for="name">Seu nome:</label>
-                <input type="text" id="name" placeholder="...">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-me o que você achou do meu portfólio..." required></textarea>
 
-                <label for="email">Seu email:</label>
-                <input type="email" id="email" placeholder="seuemail@exemplo.com">
-                
-                <label for="mensagem">Comentário:</label>
-                <textarea name="mensagem" id="mensagem" rows="4" placeholder="..."></textarea>
-
-                <button type="submit">Enviar</button>
-                <p>Ao clicar em enviar, sua mensagem será enviada diretamente para o nosso e-mail.</p>
-            </form>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <div id="project-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-backdrop" data-close="true"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" aria-label="Fechar projeto"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
         <p>Desenvolvido por Pedro Bispo</p>
-        <p>2025</p>
-        <p>Todos os direitos reservados©</p>
+        <p>2026</p>
     </footer>
 
     <script src="main/js/script.js"></script>
