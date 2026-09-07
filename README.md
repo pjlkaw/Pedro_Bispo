@@ -40,7 +40,7 @@ O design segue uma linha minimalista, mas com personalidade, destacando o conteÃ
 ## Contato
 
 Quer ver mais do meu trabalho ou trocar uma ideia?
-
+ 
 - **LinkedIn:** [linkedin.com/in/pedro-bispo](https://www.linkedin.com/in/pedro-bispo-603191309/)  
 - **Email:** pedrorochabispo@gmail.com
 ---
