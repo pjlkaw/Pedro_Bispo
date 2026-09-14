@@ -55,7 +55,7 @@ const projects = [
     {
         name: 'DeCode',
         category: 'Ferramenta de codificação',
-        image: null,
+        image: 'main/assets/decode.png',
         summary: 'Aplicação para codificar e decodificar textos utilizando diferentes métodos.',
         description: 'O DeCode é uma ferramenta desenvolvida para praticar lógica de programação e manipulação do DOM. A aplicação permite transformar textos utilizando diferentes métodos de codificação e decodificação, proporcionando uma experiência prática com JavaScript.',
         details: [
