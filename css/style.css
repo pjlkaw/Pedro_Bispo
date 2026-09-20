@@ -60,6 +60,20 @@ h1 {
 
 /* header */
 
+.btn-language {
+  position: absolute;
+  right: 50px;
+  margin-top: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--bg-alt);
+}
+
+.btn-language a {
+  text-decoration: none;
+  color: white;
+}
+
 .site-header{
   position: sticky;
   top: 0;
@@ -264,7 +278,7 @@ h1 {
     border-bottom: 1px solid var(--line);
     gap: 16px;
   }
-  .featured{ padding: 24px; }
+  .featured{ padding: 24px; width: 90%;}
   .project-img {
     width: 300px;
   }
