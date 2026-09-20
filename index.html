@@ -1,232 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Pedro Bispo, desenvolvedor front-end com foco em interfaces modernas, responsivas e de alto impacto.">
-    <title>Pedro Bispo | Portfólio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="main/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Bispo — Desenvolvedor Web</title>
+<meta name="description" content="Portfólio de Pedro Bispo, desenvolvedor web em Jandira, SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="topbar container" aria-label="Menu principal">
-            <a class="brand" href="#home" data-page="home">Pedro Bispo</a>
-            <div class="nav-links">
-                <a href="#about" data-page="about">Sobre</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projetos</a>
-                <a href="#contact">Contato</a>
-            </div>
-            <a class="button button-ghost" href="#contact">Fale comigo</a>
-        </nav>
 
-        <div id="home" class="hero container page-view">
-            <div class="hero-copy">
-                <span class="eyebrow">Full Stack Developer</span>
-                <h1>Pedro Bispo</h1>
-                <p>
-                    Desenvolvedor full-stack em formação, criando interfaces claras,
-                    responsivas e experiências digitais funcionais.
-                </p>
-                <div class="hero-actions">
-                    <a class="button" href="#projects">Ver projetos</a>
-                    <a class="button button-secondary" href="#about" data-page="about">Sobre mim</a>
-                </div>
-                <ul class="quick-stats" aria-label="Estatísticas pessoais">
-                    <li>
-                        <strong>Front-End</strong>
-                        <span>HTML, CSS & JavaScript</span>
-                    </li>
+<header class="site-header">
+  <a href="#topo" class="mark">Pedro Bispo</a>
+  <nav class="nav">
+    <a href="#sobre">Sobre</a>
+    <a href="#conhecimento">Skills</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-                    <li>
-                        <strong>Back-End</strong>
-                        <span>Python, Node.js & APIs REST</span>
-                    </li>
+<main>
 
-                    <li>
-                        <strong>SQL</strong>
-                        <span>MySQL & bancos de dados</span>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <section id="about" class="about-view section container page-view" aria-hidden="true">
-            <div class="section-heading">
-                <span class="section-kicker">Sobre mim</span>
-                <h2>Desenvolvedor com foco em interface, funcionalidade e evolução contínua.</h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-card">
-                    <p>
-                        Olá! Meu nome é Pedro Bispo e sou estudante de Engenharia de Computação e Informática para Internet.
-                        Tenho me dedicado ao desenvolvimento front-end com HTML, CSS, JavaScript e design de interfaces.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <p>
-                        Ao longo do tempo, venho construindo projetos práticos, experimentando novas tecnologias e buscando criar
-                        experiências agradáveis, responsivas e bem estruturadas.
-                    </p>
-                </div>
-                <div class="about-card highlight">
-                    <p>
-                        Meu objetivo é continuar evoluindo como profissional, combinando tecnologia, estética e boa usabilidade para
-                        entregar soluções que realmente fazem sentido para as pessoas.
-                    </p>
-                </div>
-            </div>
-
-            <a class="button button-secondary about-back" href="#home" data-page="home">
-                <i class="fa-solid fa-arrow-left"></i> Voltar ao início
-            </a>
-        </section>
-    </header>
-
-    <main>
-        <section id="skills" class="section section-alt">
-            <div class="container">
-                <div class="section-heading center">
-                    <span class="section-kicker">Skills</span>
-                    <h2>Tecnologias que utilizo e estou aprofundando.</h2>
-                </div>
-
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-npm"></i><span>NPM</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="featured" class="section container">
-            <div class="section-heading">
-                <span class="section-kicker">Projeto destaque</span>
-                <h2>KeeperHub</h2>
-            </div>
-
-            <article class="featured-project">
-                <div class="featured-media">
-                    <img src="main/assets/keeperhub-logo.png" alt="Logo do KeeperHub">
-
-                    <div class="thumbnail-row">
-                        <button class="thumbnail-button" type="button"
-                            aria-label="Visualizar módulo de Controle de Medicamentos">
-                            <img src="main/assets/keeperhub-main.png" alt="Módulo de Controle de Medicamentos do KeeperHub">
-                        </button>
-                        <button class="thumbnail-button" type="button"
-                            aria-label="Visualizar página inicial do KeeperHub">
-                            <img src="main/assets/keeperhub-hub.png" alt="Página inicial do KeeperHub">
-                        </button>
-                        <button class="thumbnail-button" type="button"
-                            aria-label="Visualizar menu do KeeperHub">
-                            <img src="main/assets/keeperhub-light.png" alt="Menu do KeeperHub">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="featured-copy">
-                    <h3>Uma aplicação construída para crescer.</h3>
-
-                    <p>
-                        O KeeperHub é um projeto desenvolvido com uma estrutura modular,
-                        pensado para organizar diferentes funcionalidades dentro de uma
-                        mesma aplicação. Entre seus módulos está o Controle de Medicamentos,
-                        desenvolvido para facilitar o gerenciamento e a visualização dessas informações.
-                    </p>
-
-                    <ul>
-                        <li>Desenvolvimento de uma estrutura modular e organizada.</li>
-                        <li>Criação e evolução do módulo de Controle de Medicamentos.</li>
-                        <li>Uso de Git e branches para organização do desenvolvimento.</li>
-                        <li>Interface responsiva e componentes reutilizáveis.</li>
-                    </ul>
-
-                    <div class="links">
-                        <a href="https://github.com/pjlkaw/KeeperHub"
-                        target="_blank"
-                        rel="noreferrer">
-                            Código <i class="fa-solid fa-link"></i>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-
-        <section id="projects" class="section section-alt">
-            <div class="container">
-                <div class="section-heading center">
-                    <span class="section-kicker">Projetos</span>
-                    <h2>Experimentos, soluções e desafios que me ajudaram a evoluir.</h2>
-                </div>
-
-                <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
-            </div>
-        </section>
-
-        <section id="contact" class="section container">
-            <div class="section-heading center">
-                <span class="section-kicker">Contato</span>
-                <h2>Vamos conversar sobre ideias, projetos e oportunidades.</h2>
-            </div>
-
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/pedro-bispo-603191309" target="_blank" rel="noreferrer">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-                <button type="button" class="copy-email" data-email="pedrorochabispo@gmail.com">pedrorochabispo@gmail.com <i class="fa-solid fa-envelope"></i></button>
-                <a href="https://github.com/pjlkaw" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github"></i></a>
-            </div>
-        </section>
-
-        <section id="feedback" class="section section-feedback">
-            <div class="container">
-                <div class="section-heading center">
-                    <span class="section-kicker">Feedback</span>
-                    <h2>Seu olhar também constrói.</h2>
-                </div>
-
-                <form class="feedback-form" action="https://formspree.io/f/mzzawwnn" method="POST">
-                    <label for="name">Seu nome</label>
-                    <input id="name" name="name" type="text" placeholder="Digite seu nome" required>
-
-                    <label for="email">Seu e-mail</label>
-                    <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-me o que você achou do meu portfólio..." required></textarea>
-
-                    <button type="submit">Enviar mensagem</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <div id="project-modal" class="modal hidden" aria-hidden="true">
-        <div class="modal-backdrop" data-close="true"></div>
-        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button type="button" class="modal-close" aria-label="Fechar projeto"><i class="fa-solid fa-xmark"></i></button>
-            <div id="modal-body"></div>
-        </div>
+  <section id="topo" class="hero">
+    <p class="role">Full Stack Developer</p>
+    <h1>Pedro Bispo</h1>
+    <p class="lede">Desenvolvedor full-stack em formação, criando interfaces claras, responsivas e experiências digitais funcionais.</p>
+    <div class="hero-actions">
+      <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+      <a href="#sobre" class="btn btn-ghost">Sobre mim</a>
     </div>
+    <ul class="hero-highlights">
+      <li><strong>Front-End</strong> HTML, CSS &amp; JavaScript</li>
+      <li><strong>Back-End</strong> Python, Node.js &amp; APIs REST</li>
+      <li><strong>SQL</strong> MySQL &amp; bancos de dados</li>
+    </ul>
+  </section>
 
-    <footer class="site-footer">
-        <p>Desenvolvido por Pedro Bispo</p>
-        <p>2026</p>
-    </footer>
+  <section id="sobre" class="section">
+    <div class="section-inner">
+      <h2>Desenvolvedor com foco em interface, funcionalidade e evolução contínua.</h2>
+      <p>Olá! Meu nome é Pedro Bispo e sou estudante de Engenharia de Computação e Informática para Internet. Tenho me dedicado ao desenvolvimento front-end com HTML, CSS, JavaScript e design de interfaces.</p>
+      <p>Ao longo do tempo, venho construindo projetos práticos, experimentando novas tecnologias e buscando criar experiências agradáveis, responsivas e bem estruturadas.</p>
+      <p>Meu objetivo é continuar evoluindo como profissional, combinando tecnologia, estética e boa usabilidade para entregar soluções que realmente fazem sentido para as pessoas.</p>
+    </div>
+  </section>
 
-    <script src="main/js/script.js"></script>
+  <section id="conhecimento" class="section alt">
+    <div class="section-inner">
+      <h2>Tecnologias que utilizo e estou aprofundando.</h2>
+      <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Figma</li>
+        <li>Git</li>
+        <li>MySQL</li>
+        <li>Node.js</li>
+        <li>NPM</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projetos" class="section">
+    <div class="section-inner">
+      <h2>Projetos</h2>
+
+      <article class="featured">
+        <p class="featured-label">Projeto destaque</p>
+        <h3>KeeperHub</h3>
+        <div class="featured-gallery">
+          <img class="project-img" src="main/assets/keeperhub.png" alt="Módulo de Controle de Medicamentos do KeeperHub" loading="lazy">
+        </div>
+        <p class="featured-sub">Uma aplicação construída para crescer.</p>
+        <p>O KeeperHub é um hub para organizar a vida de manter uma casa, desenvolvido com uma estrutura modular para reunir diferentes funcionalidades em uma mesma aplicação. Entre seus módulos está o Controle de Medicamentos, desenvolvido para facilitar o gerenciamento e a visualização dessas informações.</p>
+        <ul class="bullets">
+          <li>Desenvolvimento de uma estrutura modular e organizada.</li>
+          <li>Criação e evolução do módulo de Controle de Medicamentos.</li>
+          <li>Uso de Git e branches para organização do desenvolvimento.</li>
+          <li>Interface responsiva e componentes reutilizáveis.</li>
+          <li>Atuação como gerente de banco de dados e organização do código do projeto.</li>
+        </ul>
+        <p> Neste projeto, desenvolvi minha capacidade de liderança, pensamento crítico e proatividade.</p>
+        <p class="links">
+          <a href="https://keeperhub-iota.vercel.app/main/home/index.html" target="_blank" rel="noopener">Site</a> ·
+          <a href="https://github.com/pjlkaw/KeeperHub" target="_blank" rel="noopener">Código</a> 
+        </p>
+      </article>
+
+      <div class="other-projects">
+        <p class="tags-label">Outros projetos</p>
+        <div class="project-picker">
+          <div class="project-tabs" role="tablist">
+            <button class="project-tab is-active" data-project="stepup">Decode</button>
+            <button class="project-tab" data-project="kittyplayer">KittyPlayer</button>
+            <button class="project-tab" data-project="lumin">Lumin</button>
+          </div>
+          <div class="project-detail">
+            <div data-detail="stepup">
+              <p>Página simples de criptografias</p>
+              <!-- <img class="project-img" src="main/assets/decode.png" width="500px" alt=""> -->
+              <div>
+                <a href="https://pjlkaw.github.io/StepUp/" target="_blank" rel="noopener">Site</a> · 
+                <a href="https://github.com/pjlkaw/StepUp" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+            <div data-detail="kittyplayer" hidden>
+              <p>Interface alternativa para o Spotify, construída sobre a Spotify Web API.</p>
+            </div>
+            <div data-detail="lumin" hidden>
+              <p>Assistente de IA para terminal, em Node.js, integrado às APIs da Groq.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section alt">
+    <div class="section-inner">
+      <h2>Contato</h2>
+      <p>Para me conhecer mais, entre em contato através dos links abaixo.</p>
+      <div class="contact-list">
+        <a href="https://www.linkedin.com/in/pedro-bispo-603191309/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:pedrorochabispo@gmail.com">pedrorochabispo@gmail.com</a>
+        <a href="https://github.com/pjlkaw" target="_blank" rel="noopener">GitHub</a>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Desenvolvido por Pedro Bispo — <span id="ano"></span></p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
